@@ -1,0 +1,16 @@
+<h1>Your Random Letters</h1>
+<div class="letters-container">
+  <% @letters.each do |letter| %>
+    <div class="letter-box"><%= letter %></div>
+  <% end %>
+</div>
+
+<div class="form-container">
+  <%= form_with url: score_games_path, method: :post, local: true, data: { turbo: false } do |f| %>
+    <p class="prompt">Text the longest word you can find!</p>
+
+    <%= f.hidden_field :letters, value: @letters.join(',') %>
+    <%= f.text_field :word, placeholder: "Enter your word", class: "word-input" %>
+    <%= f.submit "Submit", class: "submit-button" %>
+  <% end %>
+</div>

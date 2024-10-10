@@ -1,0 +1,107 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.letters-container {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+  margin-bottom: 20px; /* Space below letters */
+}
+
+.letter-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db; /* Default color */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.letter-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Random colors for each letter */
+.letter-box:nth-child(1) { background-color: #e74c3c; }
+.letter-box:nth-child(2) { background-color: #8e44ad; }
+.letter-box:nth-child(3) { background-color: #2ecc71; }
+.letter-box:nth-child(4) { background-color: #f39c12; }
+.letter-box:nth-child(5) { background-color: #1abc9c; }
+.letter-box:nth-child(6) { background-color: #e67e22; }
+.letter-box:nth-child(7) { background-color: #2980b9; }
+.letter-box:nth-child(8) { background-color: #d35400; }
+.letter-box:nth-child(9) { background-color: #27ae60; }
+.letter-box:nth-child(10) { background-color: #c0392b; }
+
+.form-container {
+  margin-top: 30px; /* Space above form */
+  text-align: center; /* Center the form elements */
+}
+
+.word-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.prompt {
+  font-size: 1.2rem;
+  margin-top: 10px; /* Spacing above the prompt */
+  margin-bottom: 20px; /* Spacing below the prompt */
+}
+
+.play-again-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2ecc71; /* Green color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.play-again-button:hover {
+  background-color: #27ae60; /* Darker green */
+}
